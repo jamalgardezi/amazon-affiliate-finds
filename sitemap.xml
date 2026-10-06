@@ -1,1 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/</loc></url><url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/electronics-tech.html</loc></url><url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/home-kitchen.html</loc></url><url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/beauty-care.html</loc></url><url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/toys-games.html</loc></url><url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/mens-clothing.html</loc></url><url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/sports-outdoors.html</loc></url><url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/automotive-tools.html</loc></url><url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/pets.html</loc></url><url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/office-creative.html</loc></url><url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/womens-clothing.html</loc></url><url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/kids-clothing.html</loc></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/electronics-tech.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/home-kitchen.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/beauty-care.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/toys-games.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/mens-clothing.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/sports-outdoors.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/automotive-tools.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/pets.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/office-creative.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/womens-clothing.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/kids-clothing.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://jamalgardezi.github.io/amazon-affiliate-finds/products/summer-fridays-mini-jet-lag-mask.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>
