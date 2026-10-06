@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jamalgardezi.github.io/amazon-affiliate-finds/sitemap.xml
