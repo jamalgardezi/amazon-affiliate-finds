@@ -1,0 +1,29 @@
+name: Daily Threads product
+on:
+  schedule:
+    - cron: '15 16 * * *'
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Publish live (also requires THREADS_ENABLED=true)
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: threads-publisher
+  cancel-in-progress: false
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Preview or publish one pet product
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_ENABLED: ${{ vars.THREADS_ENABLED }}
+          LIVE_REQUESTED: ${{ github.event_name == 'schedule' || inputs.publish }}
+        run: python3 scripts/post_threads.py
