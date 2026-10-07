@@ -20,8 +20,9 @@ jobs:
       - name: Match ASINs and fill missing images
         run: |
           python - <<'PY'
-          import csv, json, re
+          import csv, json, re, sys
           from pathlib import Path
+          csv.field_size_limit(sys.maxsize)
 
           csv_path = Path("/tmp/amazon-products.csv")
           products_path = Path("products.js")
