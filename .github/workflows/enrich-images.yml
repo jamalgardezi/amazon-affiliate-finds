@@ -12,61 +12,79 @@ permissions:
 jobs:
   enrich:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
-      - name: Download public Amazon product sample
-        run: |
-          curl -L --fail --retry 3             https://raw.githubusercontent.com/luminati-io/Amazon-dataset-samples/main/amazon-products.csv             -o /tmp/amazon-products.csv
-      - name: Match ASINs and fill missing images
+      - name: Resolve images for catalog ASINs
         run: |
           python - <<'PY'
-          import csv, json, re, sys
+          import json, re, time, html
+          import urllib.request
           from pathlib import Path
-          csv.field_size_limit(sys.maxsize)
 
-          csv_path = Path("/tmp/amazon-products.csv")
-          products_path = Path("products.js")
-
-          image_map = {}
-          with csv_path.open("r", encoding="utf-8-sig", newline="") as f:
-              for row in csv.DictReader(f):
-                  asin = (row.get("asin") or "").strip()
-                  image = (row.get("image_url") or "").strip()
-                  if asin and image and image.startswith(("https://m.media-amazon.com/", "https://images-na.ssl-images-amazon.com/")):
-                      image_map[asin] = image
-
-          text = products_path.read_text(encoding="utf-8")
-          m = re.fullmatch(r"const PRODUCTS=(.*);\s*", text, flags=re.S)
+          path = Path("products.js")
+          raw = path.read_text(encoding="utf-8")
+          m = re.search(r"const\s+PRODUCTS\s*=\s*(\[.*\])\s*;?\s*$", raw, re.S)
           if not m:
               raise SystemExit("Could not parse products.js")
           products = json.loads(m.group(1))
 
-          matched = updated = 0
-          for p in products:
+          headers = {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/154 Safari/537.36",
+              "Accept-Language": "en-US,en;q=0.9",
+              "Accept": "text/html,application/xhtml+xml"
+          }
+
+          patterns = [
+              r'id="landingImage"[^>]+(?:data-old-hires|src)="([^"]+)"',
+              r'"hiRes":"(https:[^"]+)"',
+              r'"large":"(https:[^"]+)"',
+              r'<meta\s+property="og:image"\s+content="([^"]+)"'
+          ]
+
+          updated = attempted = failed = 0
+          for i,p in enumerate(products):
+              if p.get("image"):
+                  continue
               asin = str(p.get("asin") or "").strip()
-              image = image_map.get(asin)
-              if image:
-                  matched += 1
-                  if not p.get("image"):
+              if not asin:
+                  continue
+              attempted += 1
+              url = "https://www.amazon.com/dp/" + asin
+              try:
+                  req = urllib.request.Request(url, headers=headers)
+                  with urllib.request.urlopen(req, timeout=15) as resp:
+                      page = resp.read().decode("utf-8", "ignore")
+                  image = ""
+                  for pat in patterns:
+                      mm = re.search(pat, page, re.I)
+                      if mm:
+                          image = html.unescape(mm.group(1)).replace("\\u0026","&").replace("\\/","/")
+                          break
+                  if image.startswith("https://") and ("media-amazon.com" in image or "ssl-images-amazon.com" in image):
                       p["image"] = image
                       updated += 1
+                  else:
+                      failed += 1
+              except Exception:
+                  failed += 1
+              if attempted % 50 == 0:
+                  print(f"Attempted {attempted}; images found {updated}; unresolved {failed}", flush=True)
+              time.sleep(0.35)
 
-          products_path.write_text(
-              "const PRODUCTS=" + json.dumps(products, ensure_ascii=False, separators=(",", ":")) + ";\n",
-              encoding="utf-8"
-          )
-          print(f"Dataset image ASINs: {len(image_map)}")
-          print(f"Catalog exact ASIN matches: {matched}")
+          path.write_text("const PRODUCTS=" + json.dumps(products, ensure_ascii=False, separators=(",",":")) + ";\n", encoding="utf-8")
+          print(f"Attempted: {attempted}")
           print(f"New images added: {updated}")
+          print(f"Still unresolved: {failed}")
           PY
       - name: Commit image updates
         run: |
           if git diff --quiet -- products.js; then
-            echo "No matching missing images found."
+            echo "No new images found."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add products.js
-          git commit -m "Add Amazon product images from public ASIN dataset"
+          git commit -m "Add Amazon product images by exact ASIN"
           git push
