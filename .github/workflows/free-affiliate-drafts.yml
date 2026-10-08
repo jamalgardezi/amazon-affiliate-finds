@@ -16,18 +16,16 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-      - name: Generate free daily promotional drafts
+      - name: Generate product-based promotional drafts
         run: python3 scripts/generate_affiliate_drafts.py
-      - name: Save drafts to repository
+      - name: Save drafts and rotation state
         run: |
-          if git diff --quiet -- automation/daily-posts.md && [ -f automation/daily-posts.md ]; then
-            echo "No draft changes"
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add automation/daily-posts.md
+          git add automation/daily-posts.md automation/affiliate-draft-state.json
           if ! git diff --cached --quiet; then
-            git commit -m "Update free daily affiliate promotional drafts"
+            git commit -m "Update daily affiliate product drafts and rotation"
             git push
+          else
+            echo "No draft changes"
           fi
