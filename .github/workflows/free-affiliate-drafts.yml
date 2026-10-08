@@ -1,0 +1,33 @@
+name: Free Daily Affiliate Drafts
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 7 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: free-affiliate-drafts
+  cancel-in-progress: false
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Generate free daily promotional drafts
+        run: python3 scripts/generate_affiliate_drafts.py
+      - name: Save drafts to repository
+        run: |
+          if git diff --quiet -- automation/daily-posts.md && [ -f automation/daily-posts.md ]; then
+            echo "No draft changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add automation/daily-posts.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Update free daily affiliate promotional drafts"
+            git push
+          fi
