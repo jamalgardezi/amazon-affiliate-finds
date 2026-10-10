@@ -4,5 +4,6 @@ function render(){if(!grid)return;const term=(q?.value||'').trim().toLowerCase()
 if(q)q.addEventListener('input',render);if(sort)sort.addEventListener('change',render);if(grid)render();
 document.addEventListener('error',e=>{if(e.target.matches?.('.product-media img')){e.target.hidden=true;const fallback=e.target.parentElement.querySelector('.product-placeholder');if(fallback)fallback.hidden=false}},true);
 document.querySelectorAll('.product-media img').forEach(img=>{if(img.complete&&!img.naturalWidth){img.hidden=true;const fallback=img.parentElement.querySelector('.product-placeholder');if(fallback)fallback.hidden=false}});
+document.addEventListener('click',e=>{const a=e.target.closest('a[data-guide-link]');if(a&&typeof window.gtag==='function')window.gtag('event','guide_collection_click',{link_url:a.href,page_location:location.href})});
  document.addEventListener('click',e=>{const a=e.target.closest('a[data-affiliate]');if(!a)return;if(typeof window.gtag==='function')window.gtag('event',a.dataset.deal?'amazon_deal_click':'amazon_product_click',{asin:a.dataset.asin||'',product_name:a.dataset.title||'',deal_type:a.dataset.deal||'',link_url:a.href,page_location:location.href})});
 })();
