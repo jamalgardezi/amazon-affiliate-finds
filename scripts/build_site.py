@@ -6,7 +6,7 @@ import json, re
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://jamalgardezi.github.io/amazon-affiliate-finds/'
-VERSION = '20261009-design'
+VERSION = '20261010-guides'
 E = lambda x: escape(str(x or ''), quote=True)
 raw = (ROOT / 'products.js').read_text()
 PRODUCTS = json.loads(re.search(r'(\[.*\])', raw, re.S).group(1))
@@ -131,7 +131,41 @@ def home():
 def guide_tiles():
  return ''.join(f'<a class="guide-tile" href="{slug}-buying-guide.html"><div class="icon-box" style="--tint:{tint}">{icon(sym)}</div><p class="eyebrow">Shopping guide</p><h3>{title}</h3><p>{desc}</p><span class="text-link">Read the guide →</span></a>' for slug,sym,tint,title,desc in [('tech-accessories','tech','#e4ebff','A better fit for your everyday tech.','Ports, charging requirements and package contents: what to check before you choose.'),('gaming','game','#eee5ff','Make your next gaming gift count.','Platform, edition and format: the details that make a game the right gift.'),('pet-accessories','pet','#fce6d8','Small comforts for your best friend.','A practical checklist for sizing, materials, feeding, play and travel.')])
 
+GUIDE_PICKS = {
+ 'gaming-buying-guide': [
+  ('video-games.html', 'B0DSQXNZQR', 'Hello Kitty Island Adventure', 'Nintendo Switch game', 'Check the exact Switch model, edition contents, age guidance and cartridge or code format.'),
+  ('video-games.html', 'B0D5SM3K4Q', 'Astro Bot', 'PlayStation 5 game', 'Confirm the PS5 edition and physical or digital format; a disc needs a compatible disc drive.'),
+  ('gaming-accessories.html', 'B01MY9JB2U', 'Game Traveler Switch travel case', 'Carry and organize', 'Check the case dimensions and stated compatibility with your exact Switch model.')],
+ 'pet-accessories-buying-guide': [
+  ('pets.html', 'B0DY8XHX1V', 'Coolaroo elevated dog bed', 'Resting space', 'Compare usable bed dimensions, weight guidance and cleaning instructions with your dog and available space.'),
+  ('pets.html', 'B0CSFH9D1R', 'SWIHAUK slicker brush', 'Grooming routine', 'Check the stated coat types and brush size before choosing it for your dog or cat.'),
+  ('pets.html', 'B07J2RHYM5', 'YETI Boomer 8 dog bowl', 'Feeding setup', 'Compare capacity, footprint and care instructions with your feeding area.')]
+}
+
+def enrich_guide(slug, content):
+ picks = GUIDE_PICKS.get(slug)
+ if not picks: return content
+ content = re.sub(r'<!-- guide-picks:start -->.*?<!-- guide-picks:end -->', '', content, flags=re.S)
+ cards = []
+ for source, asin, name, purpose, check in picks:
+  html = (ROOT/source).read_text()
+  match = next((m for m in re.findall(r'<article class="product-card".*?</article>', html, re.S) if f'data-asin="{asin}"' in m), None)
+  if not match: raise ValueError(f'Missing guide product: {asin}')
+  match = match.replace('<article class="product-card"', '<div class="product-card"', 1).replace('</article>', '</div>')
+  match = re.sub(r'(<h3><a[^>]*>).*?(</a></h3>)', lambda m: m[1]+E(name)+m[2], match, count=1, flags=re.S)
+  match = re.sub(r'<div class="product-rating">.*?</div>', '', match, flags=re.S)
+  match = re.sub(r'<div class="product-asin">.*?</div>', '', match, flags=re.S)
+  note = f'<p><strong>{E(purpose)}</strong><br>Check before buying: {E(check)}</p>'
+  match = match.replace('<a class="buy"', note+'<a class="buy"', 1)
+  cards.append(match)
+ links = ('<a class="button" data-guide-link href="video-games.html">Browse all video games →</a> <a class="text-link" data-guide-link href="gaming-accessories.html">Gaming accessories →</a>' if slug=='gaming-buying-guide' else '<a class="button" data-guide-link href="pets.html">Browse all pet finds →</a>')
+ block = '<!-- guide-picks:start --><section aria-labelledby="guide-picks-heading"><h2 id="guide-picks-heading">Three options to explore</h2><p>Examples from our catalog, selected for different uses. Compare the details below; these are not hands-on reviews or a ranking.</p><div class="products">'+''.join(cards)+'</div><p>'+links+'</p><p class="results-note">Check the selected variant, current price, availability and delivery on Amazon.</p></section><!-- guide-picks:end -->'
+ intro = re.search(r'<p class="intro">.*?</p>', content, re.S)
+ if not intro: raise ValueError('Guide has no introduction')
+ return content[:intro.end()]+block+content[intro.end():]
+
 def article_page(slug,title,desc,content):
+ content = enrich_guide(slug, content)
  schema={'@context':'https://schema.org','@type':'Article','headline':title,'description':desc,'url':BASE+slug+'.html','author':{'@type':'Organization','name':'Gardezi Finds','url':BASE+'about.html'},'publisher':{'@type':'Organization','name':'Gardezi Finds','url':BASE},'inLanguage':'en-US','mainEntityOfPage':BASE+slug+'.html'}
  (ROOT/(slug+'.html')).write_text(head(title+' | Gardezi Finds',desc,slug+'.html',[schema,crumbs(title,slug+'.html')])+header()+f'<main id="main" class="wrap">{breadcrumb("Shopping guide")}<article class="article">{content}</article></main>'+footer()+'</body></html>')
 
