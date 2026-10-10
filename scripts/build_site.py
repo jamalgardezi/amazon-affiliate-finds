@@ -169,9 +169,22 @@ def enrich_guide(slug, content):
  if not intro: raise ValueError('Guide has no introduction')
  return content[:intro.end()]+block+content[intro.end():]
 
+EDITORIAL_UPDATED = "2026-10-10"
+GUIDE_DETAILS = {'jewelry-buying-guide': '<section aria-labelledby="comparison-heading"><h2 id="comparison-heading">Compare jewelry by what matters</h2><div class="table-wrap"><table><thead><tr><th scope="col">Type</th><th scope="col">Measure</th><th scope="col">Read on the listing</th></tr></thead><tbody><tr><td>Earrings</td><td>Diameter, drop length and weight</td><td>Post material, plating and closure</td></tr><tr><td>Bracelet</td><td>Wrist fit and adjustable range</td><td>Base metal, clasp and care instructions</td></tr><tr><td>Necklace</td><td>Chain length and pendant dimensions</td><td>Finish, extender and package contents</td></tr></tbody></table></div><h2>Common buying questions</h2><h3>Does 14K gold-plated mean solid 14K gold?</h3><p>No. Gold plating is a surface layer over another material. Check the base metal and finish description separately; do not treat a plated listing as a solid-gold listing.</p><h3>Which jewelry measurements should I check for a gift?</h3><p>Check chain length for necklaces, wrist fit for bracelets, and diameter or drop length for earrings. Compare those dimensions with a piece the recipient already wears.</p><h2>Source for material terminology</h2><p>The <a href="https://consumer.ftc.gov/articles/buying-platinum-gold-and-silver-jewelry" rel="noopener" target="_blank">FTC guide to buying platinum, gold and silver jewelry</a> explains material and plating terminology. Use it for general shopping guidance; use each selected Amazon listing for current product details.</p></section>', 'beauty-care-buying-guide': '<section aria-labelledby="comparison-heading"><h2 id="comparison-heading">Compare beauty products by their role</h2><div class="table-wrap"><table><thead><tr><th scope="col">Product role</th><th scope="col">Compare</th><th scope="col">Confirm before ordering</th></tr></thead><tbody><tr><td>Cleansing balm</td><td>Formula, texture and container size</td><td>Selected variant and directions</td></tr><tr><td>Moisturizer</td><td>Ingredient list, fragrance and texture</td><td>Pack size and intended use</td></tr><tr><td>Lip balm</td><td>Tint, scent and tube size</td><td>Exact shade and package contents</td></tr></tbody></table></div><h2>Common buying questions</h2><h3>How do I compare different pack sizes?</h3><p>Divide the product price by the total quantity in the pack, using the same unit for both products. Include delivery charges and distinguish a one-time offer from a subscription.</p><h3>Where should I check the ingredient list?</h3><p>Read the label on the current product package and compare it with the manufacturer or current listing for the exact variant. A product name alone does not identify its full formula.</p><h2>Source for understanding cosmetic labels</h2><p>The <a href="https://www.fda.gov/cosmetics/cosmetics-labeling/cosmetic-ingredient-names" rel="noopener" target="_blank">FDA explanation of cosmetic ingredient names</a> provides background on ingredient labeling. It does not endorse the selected products. Use each Amazon listing and the current package for product-specific details.</p></section>'}
+
+def guide_editorial(slug, content):
+ content = re.sub(r'<!-- editorial:start -->.*?<!-- editorial:end -->', '', content, flags=re.S)
+ content = re.sub(r'<p class="meta">.*?</p>', '', content, flags=re.S)
+ meta = '<!-- editorial:start --><p class="meta">Published by <a href="about.html">Gardezi Finds</a> · Updated <time datetime="'+EDITORIAL_UPDATED+'">October 10, 2026</time></p><!-- editorial:end -->'
+ heading = re.search(r'</h1>', content)
+ if heading: content=content[:heading.end()]+meta+content[heading.end():]
+ content = re.sub(r'<!-- guide-details:start -->.*?<!-- guide-details:end -->', '', content, flags=re.S)
+ if slug in GUIDE_DETAILS: content+='<!-- guide-details:start -->'+GUIDE_DETAILS[slug]+'<!-- guide-details:end -->'
+ return content
+
 def article_page(slug,title,desc,content):
- content = enrich_guide(slug, content)
- schema={'@context':'https://schema.org','@type':'Article','headline':title,'description':desc,'url':BASE+slug+'.html','author':{'@type':'Organization','name':'Gardezi Finds','url':BASE+'about.html'},'publisher':{'@type':'Organization','name':'Gardezi Finds','url':BASE},'inLanguage':'en-US','mainEntityOfPage':BASE+slug+'.html'}
+ content = guide_editorial(slug, enrich_guide(slug, content))
+ schema={'@context':'https://schema.org','@type':'Article','dateModified':EDITORIAL_UPDATED,'headline':title,'description':desc,'url':BASE+slug+'.html','author':{'@type':'Organization','name':'Gardezi Finds','url':BASE+'about.html'},'publisher':{'@type':'Organization','name':'Gardezi Finds','url':BASE},'inLanguage':'en-US','mainEntityOfPage':BASE+slug+'.html'}
  (ROOT/(slug+'.html')).write_text(head(title+' | Gardezi Finds',desc,slug+'.html',[schema,crumbs(title,slug+'.html')])+header()+f'<main id="main" class="wrap">{breadcrumb("Shopping guide")}<article class="article">{content}</article></main>'+footer()+'</body></html>')
 
 def guides():
@@ -200,5 +213,5 @@ if __name__=='__main__':
  for g in GROUPS: print(g[0],build_collection(g))
  home();preserved_articles();guides();search_page()
  pages=['']+[g[0]+'.html' for g in GROUPS if collection(g)]+['about.html','pet-accessories-buying-guide.html','tech-accessories-buying-guide.html','gaming-buying-guide.html','jewelry-buying-guide.html','beauty-care-buying-guide.html']
- (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'<url><loc>{BASE+p}</loc></url>\n' for p in pages)+'</urlset>\n')
+ (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'<url><loc>{BASE+p}</loc>'+ ('<lastmod>'+EDITORIAL_UPDATED+'</lastmod>' if p.endswith('-buying-guide.html') or p=='about.html' else '')+'</url>\n' for p in pages)+'</urlset>\n')
  (ROOT/'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: '+BASE+'sitemap.xml\n')
