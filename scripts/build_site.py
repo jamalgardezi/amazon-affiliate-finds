@@ -6,7 +6,7 @@ import json, re
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://jamalgardezi.github.io/amazon-affiliate-finds/'
-VERSION = '20261010-guides'
+VERSION = '20261010-performance'
 E = lambda x: escape(str(x or ''), quote=True)
 raw = (ROOT / 'products.js').read_text()
 PRODUCTS = json.loads(re.search(r'(\[.*\])', raw, re.S).group(1))
@@ -209,9 +209,35 @@ def search_page():
  out=head('Search Amazon Products | Gardezi Finds',desc,'category.html',noindex=True)+header()+f'<main id="main" class="wrap">{breadcrumb("Search")}<div class="collection-head"><div><h1 id="search-heading">Search all finds</h1><p>Find a product, explore a category, or look up an ASIN.</p></div></div>{tools()}<p id="result-count" class="count" role="status" aria-live="polite">Loading the catalog…</p><div class="products" id="search-results"></div><div id="empty" class="empty" hidden><h2>No matching finds</h2><p>Try a shorter product name or browse one of our collections.</p><a class="text-link" href="./#collections">Explore all collections →</a></div><noscript><p>Enable JavaScript to search, or <a href="./#collections">browse our collections</a>. Collection pages show products without JavaScript.</p></noscript>{product_note()}</main>'+footer()+f'<script defer src="products.js?v={VERSION}"></script><script defer src="assets/search.js?v={VERSION}"></script></body></html>'
  (ROOT/'category.html').write_text(out)
 
+def optimize_images(content):
+ def update(match):
+  tag = match.group(0)
+  source = re.search(r'src="([^"]+)"', tag)
+  if not source or 'm.media-amazon.com/images/I/' not in source[1]: return tag
+  url = source[1]
+  if len(re.findall(r'(?:SL|SX|SY)\d+', url)) != 1: return tag
+  variant = lambda width: re.sub(r'(?:SL|SX|SY)\d+', 'SX'+str(width), url)
+  tag = re.sub(r' srcset="[^"]*"| sizes="[^"]*"', '', tag)
+  tag = tag.replace(source[0], 'src="'+variant(320)+'"')
+  sizes = '(max-width: 760px) calc((100vw - 70px) / 2), (max-width: 1050px) calc((100vw - 144px) / 3), 286px'
+  if 'fetchpriority="high"' in tag: sizes = '(max-width: 760px) 220px, (max-width: 1050px) 180px, 220px'
+  return tag[:-1]+' srcset="'+', '.join(variant(w)+' '+str(w)+'w' for w in (320,640,960))+'" sizes="'+sizes+'">'
+ return re.sub(r'<img\b[^>]*>', update, content)
+
+def optimize_static_pages():
+ for path in ROOT.glob('*.html'):
+  content = optimize_images(path.read_text())
+  if path.name == 'index.html':
+   css = (ROOT/'assets/site.css').read_text()
+   content = re.sub(r'<link rel="stylesheet" href="assets/site.css[^"]*">', lambda _: '<style data-site-styles>'+css+'</style>', content)
+   content = re.sub(r'<style data-site-styles>.*?</style>', lambda _: '<style data-site-styles>'+css+'</style>', content, flags=re.S)
+  path.write_text(content)
+
 if __name__=='__main__':
  for g in GROUPS: print(g[0],build_collection(g))
  home();preserved_articles();guides();search_page()
  pages=['']+[g[0]+'.html' for g in GROUPS if collection(g)]+['about.html','pet-accessories-buying-guide.html','tech-accessories-buying-guide.html','gaming-buying-guide.html','jewelry-buying-guide.html','beauty-care-buying-guide.html']
  (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'<url><loc>{BASE+p}</loc>'+ ('<lastmod>'+EDITORIAL_UPDATED+'</lastmod>' if p.endswith('-buying-guide.html') or p=='about.html' else '')+'</url>\n' for p in pages)+'</urlset>\n')
  (ROOT/'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: '+BASE+'sitemap.xml\n')
+
+ optimize_static_pages()
