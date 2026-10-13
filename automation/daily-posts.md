@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-10-11 (UTC)
-Selected ASIN: 0062421379
+Generated: 2026-10-13 (UTC)
+Selected ASIN: 0062443577
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: Divergent Series Four-Book Paperback Box Set: Divergent, Insurgent, Allegiant, Four
+🛍️ Amazon find: Amelia Bedelia I Can Read Box Set #2: Books Are a Ball (I Can Read Level 1)
 
 Category: Book
-View product: https://www.amazon.com/dp/0062421379?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0062443577?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: Divergent Series Four-Book Paperback Box Set: Divergent, Insurgent, Allegiant, Four
+Today's Amazon find: Amelia Bedelia I Can Read Box Set #2: Books Are a Ball (I Can Read Level 1)
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0062421379?tag=gadgetguy512-20
+https://www.amazon.com/dp/0062443577?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
