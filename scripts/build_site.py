@@ -72,7 +72,7 @@ PATHS={
 def icon(key): return f'<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{PATHS[key]}</svg>'
 def brand():return '<a class="brand" href="./" aria-label="Gardezi Finds home"><span class="brand-mark" aria-hidden="true">G</span>Gardezi <span>Finds.</span></a>'
 def header():
- return f'''<a class="skip" href="#main">Skip to content</a><div class="disclosure">Independent Amazon finds. As an Amazon Associate, I earn from qualifying purchases. <a href="about.html#disclosure">Learn more</a></div><header class="site-header"><div class="wrap header-inner">{brand()}<nav class="main-nav" aria-label="Main navigation"><a href="./#collections">Collections</a><a href="./#guides">Guides</a><a href="about.html">About</a></nav><form class="global-search" action="category.html" role="search"><input type="hidden" name="all" value="1"><input name="q" aria-label="Search all products" placeholder="Search your next find…" required><button aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg></button></form></div></header>'''
+ return f'''<a class="skip" href="#main">Skip to content</a><div class="disclosure">Independent Amazon finds. As an Amazon Associate, I earn from qualifying purchases. <a href="about.html#disclosure">Learn more</a></div><header class="site-header"><div class="wrap header-inner">{brand()}<nav class="main-nav" aria-label="Main navigation"><a href="./#collections">Collections</a><a href="./#guides">Guides</a><a href="amazon-new-finds.html">New finds</a><a href="about.html">About</a></nav><form class="global-search" action="category.html" role="search"><input type="hidden" name="all" value="1"><input name="q" aria-label="Search all products" placeholder="Search your next find…" required><button aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></svg></button></form></div></header>'''
 def footer():
  return f'''<footer class="site-footer"><div class="wrap"><div class="footer-top"><div>{brand()}<p>A useful place to discover everyday products, explore collections and shop thoughtfully.</p></div><div class="footer-links"><strong>Explore</strong><a href="electronics-tech.html">Electronics & tech</a><a href="home-kitchen.html">Home & kitchen</a><a href="beauty-care.html">Beauty & care</a><a href="video-games.html">Video games</a></div><div class="footer-links"><strong>Shopping guides</strong><a href="tech-accessories-buying-guide.html">Charging & tech</a><a href="gaming-buying-guide.html">Games & gifting</a><a href="pet-accessories-buying-guide.html">Pet accessories</a></div><div class="footer-links"><strong>Gardezi Finds</strong><a href="about.html">About & affiliate policy</a><a href="https://x.com/gardezi84" rel="noopener" target="_blank">Follow on X</a><a href="https://www.threads.com/@gadgetguyfinds" rel="noopener" target="_blank">Follow on Threads</a></div></div><div class="footer-bottom"><span>As an Amazon Associate, I earn from qualifying purchases.</span><span>Amazon.com · Check current prices, availability and delivery on Amazon.</span></div></div></footer>'''
 def head(title,desc,slug='',schemas=None,noindex=False):
@@ -237,12 +237,18 @@ def optimize_static_pages():
    content = re.sub(r'<style data-site-styles>.*?</style>', lambda _: '<style data-site-styles>'+css+'</style>', content, flags=re.S)
   path.write_text(content)
 
+
 if __name__=='__main__':
  for g in GROUPS: print(g[0],build_collection(g))
  home();preserved_articles();guides();search_page()
- pages=['']+[g[0]+'.html' for g in GROUPS if collection(g)]+['about.html','pet-accessories-buying-guide.html','tech-accessories-buying-guide.html','gaming-buying-guide.html','jewelry-buying-guide.html','beauty-care-buying-guide.html','kids-toys-buying-guide.html']
+ pages=['','amazon-new-finds.html']+[g[0]+'.html' for g in GROUPS if collection(g)]+['about.html','pet-accessories-buying-guide.html','tech-accessories-buying-guide.html','gaming-buying-guide.html','jewelry-buying-guide.html','beauty-care-buying-guide.html','kids-toys-buying-guide.html']
  (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'<url><loc>{BASE+p}</loc>'+ ('<lastmod>'+EDITORIAL_UPDATED+'</lastmod>' if p.endswith('-buying-guide.html') or p=='about.html' else '')+'</url>\n' for p in pages)+'</urlset>\n')
  (ROOT/'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: '+BASE+'sitemap.xml\n')
 
  optimize_static_pages()
 
+
+
+if __name__=='__main__':
+ import runpy
+ runpy.run_path(str(ROOT/'scripts/build_imports.py'))['build_imports'](ROOT)
