@@ -39,19 +39,22 @@ NOT_GAME = re.compile(r'controller|keyboard|headset|microphone|case|charger|char
 
 def belongs(p,g):
  slug=g[0]
- if slug=='video-games': return p['asin'] in GAME_IDS
+ if slug=='video-games': return p.get('collection') == 'video-games' or bool(p['asin'] and p['asin'] in GAME_IDS)
+ if slug=='gaming-accessories' and p.get('category')=='Gaming Accessories': return True
  if slug=='gaming-accessories': return p['asin'] not in GAME_IDS and p.get('category') not in ('Toy','Book') and bool(ACCESSORY.search(p['title']))
  if slug=='roblox': return bool(re.search(r'\broblox\b',p['title'],re.I))
+ if slug=='more-finds' and p.get('sourceFile'): return p.get('category')=='More Finds'
  if slug=='more-finds': return bool(p.get('creatorFavorite')) and not re.search(r'protection plan|staging product',p['title'],re.I)
  return p.get('category') in g[2]
 
 def collection(g):
  seen=set(); a=[]
  for p in PRODUCTS:
-  if belongs(p,g) and p.get('asin') and p.get('url') and p['asin'] not in seen:
-   seen.add(p['asin']);a.append(p)
+  key=p.get('asin') or p.get('url')
+  if belongs(p,g) and p.get('url') and key not in seen:
+   seen.add(key);a.append(p)
  a=sorted(a,key=lambda p:(not bool(p.get('image')),not bool(p.get('creatorFavorite')),p['title'].lower()))
- return a[:96] if g[0]=='more-finds' else a
+ return a
 
 PATHS={
  'tech':'<rect x="5" y="5" width="22" height="16" rx="2"/><path d="M2 26h28M12 21v5m8-5v5"/>',
@@ -89,7 +92,7 @@ def card(p,i=0,sym='spark'):
  image=p.get('image');rating=p.get('rating');title=p['title'];url=p['url']
  media=f'<img src="{E(image)}" alt="{E(title)}" width="240" height="200" loading="lazy" decoding="async" referrerpolicy="no-referrer">'+fallback(sym,True) if image else fallback(sym)
  rated=f'★ {float(rating):.1f} <span>· supplied rating</span>' if rating else '<span>Check reviews on Amazon</span>'
- return f'''<article class="product-card" data-title="{E(title)}" data-search="{E((title+' '+p.get('category','')+' '+p['asin']).lower())}" data-rating="{rating or 0}" data-photo="{1 if image else 0}" data-order="{i}"><div class="product-media">{media}</div><div class="product-tag">{E(p.get('brand') or p.get('category'))}</div><h3><a href="{E(url)}" target="_blank" rel="sponsored nofollow noopener" data-affiliate data-asin="{p['asin']}" data-title="{E(title)}">{E(title)}</a></h3><div class="product-rating">{rated}</div><div class="product-asin">ASIN: {p['asin']}</div><a class="buy" href="{E(url)}" target="_blank" rel="sponsored nofollow noopener" data-affiliate data-asin="{p['asin']}" data-title="{E(title)}" aria-label="View {E(title)} on Amazon">View on Amazon <span aria-hidden="true">↗</span></a></article>'''
+ return f'''<article class="product-card" data-title="{E(title)}" data-search="{E((title+' '+p.get('category','')+' '+p['asin']).lower())}" data-rating="{rating or 0}" data-photo="{1 if image else 0}" data-order="{i}"><div class="product-media">{media}</div><div class="product-tag">{E(p.get('brand') or p.get('category'))}</div><h3><a href="{E(url)}" target="_blank" rel="sponsored nofollow noopener" data-affiliate data-asin="{p['asin']}" data-title="{E(title)}">{E(title)}</a></h3><div class="product-rating">{rated}</div><div class="product-asin">{('ASIN: '+p['asin']) if p['asin'] else 'See product details on Amazon'}</div><a class="buy" href="{E(url)}" target="_blank" rel="sponsored nofollow noopener" data-affiliate data-asin="{p['asin']}" data-title="{E(title)}" aria-label="View {E(title)} on Amazon">View on Amazon <span aria-hidden="true">↗</span></a></article>'''
 
 def product_note():return '<p class="results-note">Supplied ratings come from the source catalog, with no observation date. They are not live ratings or our own reviews. Check Amazon for current details.</p>'
 def tips(g):return '<aside class="shopping-tips" aria-label="Shopping checklist"><h2>Before you choose</h2><div class="tip-list">'+''.join(f'<p><strong>{E(h)}</strong>{E(t)}</p>' for h,t in g[6])+'</div></aside>'
