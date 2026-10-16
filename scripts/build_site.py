@@ -255,3 +255,6 @@ if __name__=='__main__':
 if __name__=='__main__':
  import runpy
  runpy.run_path(str(ROOT/'scripts/build_imports.py'))['build_imports'](ROOT)
+
+if __name__=="__main__":
+ runpy.run_path(str(ROOT/"scripts/seo_us.py"))["apply"](ROOT)
