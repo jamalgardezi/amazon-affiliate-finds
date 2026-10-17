@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-10-16 (UTC)
-Selected ASIN: 0063391082
+Generated: 2026-10-17 (UTC)
+Selected ASIN: 0152567089
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: Wicked Collector’s Edition: The Life and Times of the Wicked Witch of the West (Wicked…
+🛍️ Amazon find: The Napping House
 
 Category: Book
-View product: https://www.amazon.com/dp/0063391082?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0152567089?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: Wicked Collector’s Edition: The Life and Times of the Wicked Witch of the West (Wicked Years, 1)
+Today's Amazon find: The Napping House
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0063391082?tag=gadgetguy512-20
+https://www.amazon.com/dp/0152567089?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
