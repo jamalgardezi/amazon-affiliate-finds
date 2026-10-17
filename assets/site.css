@@ -3,3 +3,10 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;transform:none!important}}
 
 .product-card h3{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:65px} @media(max-width:760px){.product-card h3{min-height:56px}}
+
+/* Prominent social links */
+footer a[href*="x.com/gardezi84"],footer a[href*="threads.com/@gadgetguyfinds"],footer a[href*="pin.it/5SXsTUXCD"]{display:inline-flex!important;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;margin:6px 8px 6px 0;border-radius:10px;background:#172439;color:#fff!important;font-size:15px!important;font-weight:800!important;line-height:1.4;text-decoration:none!important;border:2px solid transparent;box-shadow:0 3px 8px #17243920;transition:transform .15s,box-shadow .15s}
+footer a[href*="pin.it/5SXsTUXCD"]{background:#b60022}
+footer a[href*="threads.com/@gadgetguyfinds"]{background:#222}
+footer a[href*="x.com/gardezi84"]:hover,footer a[href*="threads.com/@gadgetguyfinds"]:hover,footer a[href*="pin.it/5SXsTUXCD"]:hover{transform:translateY(-2px);box-shadow:0 5px 12px #17243935;text-decoration:underline!important}
+footer a[href*="x.com/gardezi84"]:focus-visible,footer a[href*="threads.com/@gadgetguyfinds"]:focus-visible,footer a[href*="pin.it/5SXsTUXCD"]:focus-visible{outline:3px solid #365bce;outline-offset:3px}
