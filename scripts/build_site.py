@@ -244,7 +244,7 @@ def optimize_static_pages():
 if __name__=='__main__':
  for g in GROUPS: print(g[0],build_collection(g))
  home();preserved_articles();guides();search_page()
- pages=['','amazon-new-finds.html']+[g[0]+'.html' for g in GROUPS if collection(g)]+['about.html','pet-accessories-buying-guide.html','tech-accessories-buying-guide.html','gaming-buying-guide.html','jewelry-buying-guide.html','beauty-care-buying-guide.html','kids-toys-buying-guide.html']
+ pages=['','amazon-new-finds.html','beauty-links.html']+[g[0]+'.html' for g in GROUPS if collection(g)]+['about.html','pet-accessories-buying-guide.html','tech-accessories-buying-guide.html','gaming-buying-guide.html','jewelry-buying-guide.html','beauty-care-buying-guide.html','kids-toys-buying-guide.html']
  (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'<url><loc>{BASE+p}</loc>'+ ('<lastmod>'+EDITORIAL_UPDATED+'</lastmod>' if p.endswith('-buying-guide.html') or p=='about.html' else '')+'</url>\n' for p in pages)+'</urlset>\n')
  (ROOT/'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: '+BASE+'sitemap.xml\n')
 
