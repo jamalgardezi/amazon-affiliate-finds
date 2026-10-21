@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-10-20 (UTC)
-Selected ASIN: 0316127159
+Generated: 2026-10-21 (UTC)
+Selected ASIN: 0316382000
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: The Jolly Christmas Postman
+🛍️ Amazon find: The Wild Robot (Volume 1)
 
 Category: Book
-View product: https://www.amazon.com/dp/0316127159?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0316382000?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: The Jolly Christmas Postman
+Today's Amazon find: The Wild Robot (Volume 1)
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0316127159?tag=gadgetguy512-20
+https://www.amazon.com/dp/0316382000?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
