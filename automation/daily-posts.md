@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-10-21 (UTC)
-Selected ASIN: 0316382000
+Generated: 2026-10-22 (UTC)
+Selected ASIN: 031670704X
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: The Wild Robot (Volume 1)
+🛍️ Amazon find: Midnight Sun
 
 Category: Book
-View product: https://www.amazon.com/dp/0316382000?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/031670704X?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: The Wild Robot (Volume 1)
+Today's Amazon find: Midnight Sun
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0316382000?tag=gadgetguy512-20
+https://www.amazon.com/dp/031670704X?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
