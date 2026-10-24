@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-10-23 (UTC)
-Selected ASIN: 0358653037
+Generated: 2026-10-24 (UTC)
+Selected ASIN: 0374360979
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: The Lord of the Rings Illustrated (Tolkien Illustrated Editions)
+🛍️ Amazon find: The Pout-Pout Fish
 
 Category: Book
-View product: https://www.amazon.com/dp/0358653037?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0374360979?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: The Lord of the Rings Illustrated (Tolkien Illustrated Editions)
+Today's Amazon find: The Pout-Pout Fish
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0358653037?tag=gadgetguy512-20
+https://www.amazon.com/dp/0374360979?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
