@@ -7,3 +7,6 @@ document.querySelectorAll('.product-media img').forEach(img=>{if(img.complete&&!
 document.addEventListener('click',e=>{const a=e.target.closest('a[data-guide-link]');if(a&&typeof window.gtag==='function')window.gtag('event','guide_collection_click',{link_url:a.href,page_location:location.href})});
  document.addEventListener('click',e=>{const a=e.target.closest('a[data-affiliate]');if(!a)return;if(typeof window.gtag==='function')window.gtag('event',a.dataset.deal?'amazon_deal_click':'amazon_product_click',{asin:a.dataset.asin||'',product_name:a.dataset.title||'',deal_type:a.dataset.deal||'',link_url:a.href,page_location:location.href})});
 })();
+
+/* Shared Gadgetguy Finds round logo */
+(function(){function applyLogo(){document.querySelectorAll('a.brand').forEach(function(a){var img=document.createElement('img');img.src='https://gadgetguyfinds.sjgardezi.chatgpt.site/assets/gadgetguy-logo.png';img.alt='Gadgetguy Finds';img.width=96;img.height=96;img.style.cssText='display:block;width:clamp(80px,8vw,96px);height:auto;border-radius:50%;object-fit:contain';a.replaceChildren(img);a.setAttribute('aria-label','Gadgetguy Finds home');});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',applyLogo);}else{applyLogo();}})();
