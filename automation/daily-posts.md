@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-10-24 (UTC)
-Selected ASIN: 0374360979
+Generated: 2026-10-25 (UTC)
+Selected ASIN: 0375846611
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: The Pout-Pout Fish
+🛍️ Amazon find: Magic Tree House Boxed Set, Books 13-16: Vacation Under the Volcano, Day of the Dragon…
 
 Category: Book
-View product: https://www.amazon.com/dp/0374360979?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0375846611?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: The Pout-Pout Fish
+Today's Amazon find: Magic Tree House Boxed Set, Books 13-16: Vacation Under the Volcano, Day of the Dragon King, Viking Ships at Sunrise, and Hour of the Olympics
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0374360979?tag=gadgetguy512-20
+https://www.amazon.com/dp/0375846611?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
