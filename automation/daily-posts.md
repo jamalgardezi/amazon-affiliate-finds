@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-10-25 (UTC)
-Selected ASIN: 0375846611
+Generated: 2026-10-26 (UTC)
+Selected ASIN: 0399226907
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: Magic Tree House Boxed Set, Books 13-16: Vacation Under the Volcano, Day of the Dragon…
+🛍️ Amazon find: The Very Hungry Caterpillar
 
 Category: Book
-View product: https://www.amazon.com/dp/0375846611?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0399226907?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: Magic Tree House Boxed Set, Books 13-16: Vacation Under the Volcano, Day of the Dragon King, Viking Ships at Sunrise, and Hour of the Olympics
+Today's Amazon find: The Very Hungry Caterpillar
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0375846611?tag=gadgetguy512-20
+https://www.amazon.com/dp/0399226907?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
