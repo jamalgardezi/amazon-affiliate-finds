@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-10-26 (UTC)
-Selected ASIN: 0399226907
+Generated: 2026-10-27 (UTC)
+Selected ASIN: 0440406943
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: The Very Hungry Caterpillar
+🛍️ Amazon find: D'Aulaires' Book of Greek Myths
 
 Category: Book
-View product: https://www.amazon.com/dp/0399226907?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0440406943?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: The Very Hungry Caterpillar
+Today's Amazon find: D'Aulaires' Book of Greek Myths
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0399226907?tag=gadgetguy512-20
+https://www.amazon.com/dp/0440406943?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
