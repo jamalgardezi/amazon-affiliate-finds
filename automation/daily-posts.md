@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-10-27 (UTC)
-Selected ASIN: 0440406943
+Generated: 2026-10-28 (UTC)
+Selected ASIN: 0451481089
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: D'Aulaires' Book of Greek Myths
+🛍️ Amazon find: The Last Kids on Earth: The Monster Box (books 1-3)
 
 Category: Book
-View product: https://www.amazon.com/dp/0440406943?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0451481089?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: D'Aulaires' Book of Greek Myths
+Today's Amazon find: The Last Kids on Earth: The Monster Box (books 1-3)
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0440406943?tag=gadgetguy512-20
+https://www.amazon.com/dp/0451481089?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
