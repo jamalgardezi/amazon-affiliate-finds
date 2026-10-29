@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-10-28 (UTC)
-Selected ASIN: 0451481089
+Generated: 2026-10-29 (UTC)
+Selected ASIN: 0470928654
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: The Last Kids on Earth: The Monster Box (books 1-3)
+🛍️ Amazon find: Baking and Pastry: Mastering the Art and Craft
 
 Category: Book
-View product: https://www.amazon.com/dp/0451481089?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0470928654?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: The Last Kids on Earth: The Monster Box (books 1-3)
+Today's Amazon find: Baking and Pastry: Mastering the Art and Craft
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0451481089?tag=gadgetguy512-20
+https://www.amazon.com/dp/0470928654?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
