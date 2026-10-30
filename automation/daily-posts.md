@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-10-29 (UTC)
-Selected ASIN: 0470928654
+Generated: 2026-10-30 (UTC)
+Selected ASIN: 0544568052
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: Baking and Pastry: Mastering the Art and Craft
+🛍️ Amazon find: Little Blue Truck Leads the Way Board Book
 
 Category: Book
-View product: https://www.amazon.com/dp/0470928654?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0544568052?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: Baking and Pastry: Mastering the Art and Craft
+Today's Amazon find: Little Blue Truck Leads the Way Board Book
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0470928654?tag=gadgetguy512-20
+https://www.amazon.com/dp/0544568052?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
