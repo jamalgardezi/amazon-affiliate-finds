@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-11-01 (UTC)
-Selected ASIN: 0553522779
+Generated: 2026-11-02 (UTC)
+Selected ASIN: 0593177320
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: Puppy Birthday to You! (Paw Patrol) (Little Golden Book)
+🛍️ Amazon find: The Berenstain Bears' Storytime Collection (The Berenstain Bears)
 
 Category: Book
-View product: https://www.amazon.com/dp/0553522779?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0593177320?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: Puppy Birthday to You! (Paw Patrol) (Little Golden Book)
+Today's Amazon find: The Berenstain Bears' Storytime Collection (The Berenstain Bears)
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0553522779?tag=gadgetguy512-20
+https://www.amazon.com/dp/0593177320?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
