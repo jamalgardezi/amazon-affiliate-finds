@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-11-02 (UTC)
-Selected ASIN: 0593177320
+Generated: 2026-11-03 (UTC)
+Selected ASIN: 0593492919
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: The Berenstain Bears' Storytime Collection (The Berenstain Bears)
+🛍️ Amazon find: First Lie Wins: Reese's Book Club: A Novel
 
 Category: Book
-View product: https://www.amazon.com/dp/0593177320?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0593492919?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: The Berenstain Bears' Storytime Collection (The Berenstain Bears)
+Today's Amazon find: First Lie Wins: Reese's Book Club: A Novel
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0593177320?tag=gadgetguy512-20
+https://www.amazon.com/dp/0593492919?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
