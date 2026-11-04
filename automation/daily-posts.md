@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-11-03 (UTC)
-Selected ASIN: 0593492919
+Generated: 2026-11-04 (UTC)
+Selected ASIN: 0593581962
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: First Lie Wins: Reese's Book Club: A Novel
+🛍️ Amazon find: Sally's Baking 101: Foolproof Recipes from Easy to Advanced
 
 Category: Book
-View product: https://www.amazon.com/dp/0593492919?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0593581962?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: First Lie Wins: Reese's Book Club: A Novel
+Today's Amazon find: Sally's Baking 101: Foolproof Recipes from Easy to Advanced
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0593492919?tag=gadgetguy512-20
+https://www.amazon.com/dp/0593581962?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
