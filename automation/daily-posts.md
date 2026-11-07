@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-11-06 (UTC)
-Selected ASIN: 059365840X
+Generated: 2026-11-07 (UTC)
+Selected ASIN: 0593897617
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: Bluey: Fun and Games: A Coloring Book
+🛍️ Amazon find: My First Coloring Book (Ms. Rachel)
 
 Category: Book
-View product: https://www.amazon.com/dp/059365840X?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0593897617?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: Bluey: Fun and Games: A Coloring Book
+Today's Amazon find: My First Coloring Book (Ms. Rachel)
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/059365840X?tag=gadgetguy512-20
+https://www.amazon.com/dp/0593897617?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
