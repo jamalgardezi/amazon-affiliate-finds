@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-11-08 (UTC)
-Selected ASIN: 0634003178
+Generated: 2026-11-09 (UTC)
+Selected ASIN: 0694006246
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: Essential Elements for Band - Eb Alto Saxophone Book 1 With EEi Online Access | Beginner…
+🛍️ Amazon find: Big Red Barn
 
 Category: Book
-View product: https://www.amazon.com/dp/0634003178?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0694006246?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: Essential Elements for Band - Eb Alto Saxophone Book 1 With EEi Online Access | Beginner Alto Sax Method | Step-by-Step Band Instruction for Students and Teachers |Learn Saxophone Skill and Technique
+Today's Amazon find: Big Red Barn
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0634003178?tag=gadgetguy512-20
+https://www.amazon.com/dp/0694006246?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
