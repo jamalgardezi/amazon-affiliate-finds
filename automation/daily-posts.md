@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-11-09 (UTC)
-Selected ASIN: 0694006246
+Generated: 2026-11-10 (UTC)
+Selected ASIN: 0714877735
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: Big Red Barn
+🛍️ Amazon find: Cookies!: An Interactive Recipe Book (Cook In A Book)
 
 Category: Book
-View product: https://www.amazon.com/dp/0694006246?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0714877735?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: Big Red Barn
+Today's Amazon find: Cookies!: An Interactive Recipe Book (Cook In A Book)
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0694006246?tag=gadgetguy512-20
+https://www.amazon.com/dp/0714877735?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
