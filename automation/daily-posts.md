@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-11-10 (UTC)
-Selected ASIN: 0714877735
+Generated: 2026-11-11 (UTC)
+Selected ASIN: 0736431411
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: Cookies!: An Interactive Recipe Book (Cook In A Book)
+🛍️ Amazon find: RH/Disney, The Never Girls Collection #1: Books 1-4
 
 Category: Book
-View product: https://www.amazon.com/dp/0714877735?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0736431411?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: Cookies!: An Interactive Recipe Book (Cook In A Book)
+Today's Amazon find: RH/Disney, The Never Girls Collection #1: Books 1-4
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0714877735?tag=gadgetguy512-20
+https://www.amazon.com/dp/0736431411?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
