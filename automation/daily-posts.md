@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-11-11 (UTC)
-Selected ASIN: 0736431411
+Generated: 2026-11-12 (UTC)
+Selected ASIN: 0740748475
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: RH/Disney, The Never Girls Collection #1: Books 1-4
+🛍️ Amazon find: The Complete Calvin and Hobbes
 
 Category: Book
-View product: https://www.amazon.com/dp/0736431411?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0740748475?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: RH/Disney, The Never Girls Collection #1: Books 1-4
+Today's Amazon find: The Complete Calvin and Hobbes
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0736431411?tag=gadgetguy512-20
+https://www.amazon.com/dp/0740748475?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
