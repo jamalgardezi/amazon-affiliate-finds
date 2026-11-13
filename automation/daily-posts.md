@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-11-12 (UTC)
-Selected ASIN: 0740748475
+Generated: 2026-11-13 (UTC)
+Selected ASIN: 0744059836
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: The Complete Calvin and Hobbes
+🛍️ Amazon find: The Secret World of Plants: Tales of More Than 100 Remarkable Flowers, Trees, and Seeds…
 
 Category: Book
-View product: https://www.amazon.com/dp/0740748475?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0744059836?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: The Complete Calvin and Hobbes
+Today's Amazon find: The Secret World of Plants: Tales of More Than 100 Remarkable Flowers, Trees, and Seeds (DK Treasures)
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0740748475?tag=gadgetguy512-20
+https://www.amazon.com/dp/0744059836?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
