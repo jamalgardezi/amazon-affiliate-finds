@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-11-15 (UTC)
-Selected ASIN: 0763623296
+Generated: 2026-11-16 (UTC)
+Selected ASIN: 0763645257
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: Dragonology: The Complete Book of Dragons (Ologies)
+🛍️ Amazon find: Where's Waldo? Deluxe Edition
 
 Category: Book
-View product: https://www.amazon.com/dp/0763623296?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0763645257?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: Dragonology: The Complete Book of Dragons (Ologies)
+Today's Amazon find: Where's Waldo? Deluxe Edition
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0763623296?tag=gadgetguy512-20
+https://www.amazon.com/dp/0763645257?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
