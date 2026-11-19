@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-11-18 (UTC)
-Selected ASIN: 0803731094
+Generated: 2026-11-19 (UTC)
+Selected ASIN: 0807508543
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: The Gruffalo (Picture Books)
+🛍️ Amazon find: The Boxcar Children Mysteries Boxed Set 1-4: The Boxcar Children; Surprise Island; The…
 
 Category: Book
-View product: https://www.amazon.com/dp/0803731094?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/0807508543?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: The Gruffalo (Picture Books)
+Today's Amazon find: The Boxcar Children Mysteries Boxed Set 1-4: The Boxcar Children; Surprise Island; The Yellow House; Mystery Ranch
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/0803731094?tag=gadgetguy512-20
+https://www.amazon.com/dp/0807508543?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
