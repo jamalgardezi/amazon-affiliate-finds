@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-11-21 (UTC)
-Selected ASIN: 1250058139
+Generated: 2026-11-22 (UTC)
+Selected ASIN: 1250219981
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: James Herriot's Treasury for Children: Warm and Joyful Tales by the Author of All…
+🛍️ Amazon find: InvestiGators: Take the Plunge
 
 Category: Book
-View product: https://www.amazon.com/dp/1250058139?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/1250219981?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: James Herriot's Treasury for Children: Warm and Joyful Tales by the Author of All Creatures Great and Small
+Today's Amazon find: InvestiGators: Take the Plunge
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/1250058139?tag=gadgetguy512-20
+https://www.amazon.com/dp/1250219981?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
