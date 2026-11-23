@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-11-22 (UTC)
-Selected ASIN: 1250219981
+Generated: 2026-11-23 (UTC)
+Selected ASIN: 125085055X
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: InvestiGators: Take the Plunge
+🛍️ Amazon find: Dawnshard: From The Stormlight Archive
 
 Category: Book
-View product: https://www.amazon.com/dp/1250219981?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/125085055X?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: InvestiGators: Take the Plunge
+Today's Amazon find: Dawnshard: From The Stormlight Archive
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/1250219981?tag=gadgetguy512-20
+https://www.amazon.com/dp/125085055X?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
