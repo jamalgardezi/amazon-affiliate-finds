@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-11-24 (UTC)
-Selected ASIN: 1264269056
+Generated: 2026-11-25 (UTC)
+Selected ASIN: 1338598899
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: CompTIA Network+ Certification All-in-One Exam Guide, Eighth Edition (Exam N10-008)…
+🛍️ Amazon find: Wings of Fire Box Set, The Jade Mountain Prophecy (Books 6-10)
 
 Category: Book
-View product: https://www.amazon.com/dp/1264269056?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/1338598899?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: CompTIA Network+ Certification All-in-One Exam Guide, Eighth Edition (Exam N10-008) (CompTIA Network + All-In-One Exam Guide)
+Today's Amazon find: Wings of Fire Box Set, The Jade Mountain Prophecy (Books 6-10)
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/1264269056?tag=gadgetguy512-20
+https://www.amazon.com/dp/1338598899?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
