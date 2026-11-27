@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-11-26 (UTC)
-Selected ASIN: 1338785982
+Generated: 2026-11-27 (UTC)
+Selected ASIN: 1339052709
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: The Bad Guys Even Badder Box Set (The Bad Guys #6-10)
+🛍️ Amazon find: Jujutsu Kaisen Complete Collection (29 Books) Manga Series Set (Vol. 0-27 + Guide)
 
 Category: Book
-View product: https://www.amazon.com/dp/1338785982?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/1339052709?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: The Bad Guys Even Badder Box Set (The Bad Guys #6-10)
+Today's Amazon find: Jujutsu Kaisen Complete Collection (29 Books) Manga Series Set (Vol. 0-27 + Guide)
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/1338785982?tag=gadgetguy512-20
+https://www.amazon.com/dp/1339052709?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
