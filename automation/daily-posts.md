@@ -1,25 +1,25 @@
 # Gardezi Finds — Daily promotional drafts
 
-Generated: 2026-11-27 (UTC)
-Selected ASIN: 1339052709
+Generated: 2026-11-28 (UTC)
+Selected ASIN: 1368021425
 Source: Existing `products.js` catalog (no live Amazon checks)
 
 ## X / Twitter draft
 
-🛍️ Amazon find: Jujutsu Kaisen Complete Collection (29 Books) Manga Series Set (Vol. 0-27 + Guide)
+🛍️ Amazon find: Gravity Falls: Lost Legends: 4 All-New Adventures!
 
 Category: Book
-View product: https://www.amazon.com/dp/1339052709?tag=gadgetguy512-20
+View product: https://www.amazon.com/dp/1368021425?tag=gadgetguy512-20
 
 #AmazonFinds
 
 ## Facebook / Threads draft
 
-Today's Amazon find: Jujutsu Kaisen Complete Collection (29 Books) Manga Series Set (Vol. 0-27 + Guide)
+Today's Amazon find: Gravity Falls: Lost Legends: 4 All-New Adventures!
 
 Category: Book
 Explore the product and verify current details, availability and pricing on Amazon:
-https://www.amazon.com/dp/1339052709?tag=gadgetguy512-20
+https://www.amazon.com/dp/1368021425?tag=gadgetguy512-20
 
 More curated finds: https://jamalgardezi.github.io/amazon-affiliate-finds/
 
